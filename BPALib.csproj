@@ -13,7 +13,7 @@
     <EmbeddedResource Include="TOMWrapper\Messages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Messages.Designer.cs</LastGenOutput>
-      <CustomToolNamespace>TabularEditor</CustomToolNamespace>
+      <CustomToolNamespace>TabularEditor.TOMWrapper</CustomToolNamespace>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
