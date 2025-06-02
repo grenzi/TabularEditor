@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
@@ -19,6 +19,17 @@ namespace TabularEditor.TOMWrapper
     public partial class Table: IFolder, ITabularPerspectiveObject, IDaxObject,
         IErrorMessageObject, IDaxDependantObject, IExpressionObject
     {
+        /// <summary>
+        /// So I ended up adding this because it was late enough in the day and I was tired enough that I couldn't figure out how to get the
+        /// TOM Helper to remove a partition from the model / table. 
+        /// 
+        /// So, not my proudest moment, but it works.
+        /// </summary>
+        public void RemoveAllPartitions()
+        {
+            this.Partitions.Clear();
+        }
+        
         /// <summary>
         /// Indicates whether the table is currently visible to end users. This is the case if the table contains visible measures.
         /// </summary>
