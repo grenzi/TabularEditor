@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -297,7 +297,7 @@ namespace TabularEditor.TOMWrapper.Serialization
         public static Measure DeserializeMeasure(JObject json, Table target)
         {
             var tom = TOM.JsonSerializer.DeserializeObject<TOM.Measure>(json.ToString(Formatting.None));
-            tom.Name = target.Measures.GetNewName(tom.Name);
+            //fails when model in flux - tom.Name = target.Measures.GetNewName(tom.Name);
 
             var measure = Measure.CreateFromMetadata(target, tom);
 
